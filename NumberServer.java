@@ -8,10 +8,10 @@ class Handler implements URLHandler {
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            return String.format("Number: %d", num);
+            return String.format("Nicholas' number: %d", num); //returns 'Number: 0' when there is no path
         } else if (url.getPath().equals("/increment")) {
             num += 1;
-            return String.format("Number incremented!");
+            return String.format("Number incremented!"); //increments num and returns 'Number incremented' when path is /increment
         } else {
             System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add")) {
